@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Winda & Andrian</title>
+    <meta name="description" content="Undangan Pernikahan Winda dan Andrian.">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="background-animation"></div>
+    
+    <!-- Cover Screen -->
+    <div class="cover-screen" id="coverScreen">
+        <div class="glass-card cover-content">
+            <p class="cover-subtitle">The Wedding Of</p>
+            <h2 class="cover-title">Winda & Andrian</h2>
+            <div class="guest-info">
+                <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+                <h3 class="guest-name">Tamu Undangan</h3>
+                <p>di Tempat</p>
+            </div>
+            <button id="openInvitation" class="btn-open">Buka Undangan</button>
+        </div>
+    </div>
+
+    <!-- Music Player -->
+    <div class="music-control" id="musicControl" style="display: none;">
+        <span class="music-icon" id="musicIcon">🎵</span>
+    </div>
+    <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+
+    <!-- Main Invitation Content -->
+    <div class="invitation-container" id="invitation">
+        <div class="glass-card">
+            <div class="content">
+                <p class="subtitle">The Wedding Of</p>
+                <h1 class="title">Winda & Andrian</h1>
+                <div class="parents-info" style="margin-bottom: 20px; line-height: 1.6;">
+                    <p style="font-size: 1.2rem; font-weight: 500; color: var(--text-color);">Winda Wati</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 15px;">Putri kedua dari Bpk. Risan Ashari & Ibu Iyah</p>
+                    
+                    <p style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--primary-color); font-style: italic; margin-bottom: 15px;">dengan</p>
+                    
+                    <p style="font-size: 1.2rem; font-weight: 500; color: var(--text-color);">Andrian Darma Syaputra</p>
+                    <p style="font-size: 0.95rem; color: var(--text-light);">Putra kedua dari Bpk. Syaifullah & Ibu Sri Wahyuni</p>
+                </div>
+                
+                <div class="divider">
+                    <div class="line"></div>
+                    <div class="heart">❤</div>
+                    <div class="line"></div>
+                </div>
+
+                <div class="countdown-section">
+                    <h3>Menuju Hari Bahagia</h3>
+                    <div class="countdown" id="countdown">
+                        <div class="time-box"><span id="days">00</span><p>Hari</p></div>
+                        <div class="time-box"><span id="hours">00</span><p>Jam</p></div>
+                        <div class="time-box"><span id="minutes">00</span><p>Menit</p></div>
+                        <div class="time-box"><span id="seconds">00</span><p>Detik</p></div>
+                    </div>
+                </div>
+
+                <p class="message">
+                    Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami yang akan diselenggarakan pada:
+                </p>
+
+                <div class="details">
+                    <div class="detail-item glass-panel">
+                        <h3>Akad Nikah</h3>
+                        <p><strong>Minggu, 5 Juli 2026</strong></p>
+                        <p>08:00 WIB s/d Selesai</p>
+                    </div>
+                </div>
+
+                <div class="location">
+                    <h3>Lokasi Acara</h3>
+                    <p><strong>Kediaman Mempelai Wanita</strong></p>
+                    <!-- Ganti href dengan link Google Maps yang sebenarnya jika ada -->
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn-location">
+                        Buka di Google Maps
+                    </a>
+                </div>
+
+                <div class="divider">
+                    <div class="line"></div>
+                    <div class="heart">❤</div>
+                    <div class="line"></div>
+                </div>
+
+                <p class="closing">
+                    Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai.
+                </p>
+
+                <p class="signature">
+                    Terima Kasih,<br>
+                    <strong>Keluarga Bpk. Risan Ashari & Keluarga Bpk. Syaifullah</strong>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
