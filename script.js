@@ -86,4 +86,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Update countdown every 1 second
     setInterval(updateCountdown, 1000);
     updateCountdown(); // Initial call
+
+    // Scroll Animations (Intersection Observer)
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-in-up').forEach((el) => {
+        observer.observe(el);
+    });
 });

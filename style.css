@@ -455,3 +455,27 @@ body {
         font-size: 1.2rem;
     }
 }
+
+/* Scroll Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Button pulse effect */
+.btn-open {
+    animation: pulseBtn 2s infinite;
+}
+
+@keyframes pulseBtn {
+    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 4px 25px rgba(212, 175, 55, 0.5); }
+    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3); }
+}
